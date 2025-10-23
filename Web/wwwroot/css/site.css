@@ -29,3 +29,125 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+/* Dark Mode Toggle Styles */
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+.theme-toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-toggle-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  border-radius: 30px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.theme-toggle-label:before {
+  content: "☀️";
+  font-size: 16px;
+  margin-left: 2px;
+}
+
+.theme-toggle-label:after {
+  content: "🌙";
+  font-size: 16px;
+  margin-right: 2px;
+}
+
+.theme-toggle-checkbox:checked + .theme-toggle-label {
+  background: #2196F3;
+}
+
+.theme-toggle-switch {
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-switch {
+  transform: translateX(30px);
+}
+
+/* Dark Theme Styles */
+[data-theme="dark"] {
+  --bs-body-bg: #1a1a1a;
+  --bs-body-color: #ffffff;
+  --bs-border-color: #444;
+}
+
+[data-theme="dark"] body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .navbar {
+  background-color: #2d2d2d !important;
+  border-bottom: 1px solid #444 !important;
+}
+
+[data-theme="dark"] .navbar-brand,
+[data-theme="dark"] .nav-link {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: #ccc !important;
+}
+
+[data-theme="dark"] .footer {
+  background-color: #2d2d2d;
+  border-top: 1px solid #444 !important;
+}
+
+[data-theme="dark"] .footer,
+[data-theme="dark"] .footer a {
+  color: #ccc !important;
+}
+
+[data-theme="dark"] .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+[data-theme="dark"] .form-control {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .form-control:focus {
+  background-color: #2d2d2d;
+  border-color: #0d6efd;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.1rem #1a1a1a, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}

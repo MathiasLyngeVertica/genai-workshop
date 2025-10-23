@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +27,17 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                     </ul>
+                    <div class="navbar-nav">
+                        <div class="nav-item d-flex align-items-center">
+                            <div class="theme-toggle">
+                                <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+                                <label for="theme-toggle" class="theme-toggle-label">
+                                    <span class="theme-toggle-inner"></span>
+                                    <span class="theme-toggle-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
